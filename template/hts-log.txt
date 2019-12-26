@@ -1,0 +1,47 @@
+HTTrack3.49-2+htsswf+htsjava launched on Wed, 18 Dec 2019 13:01:55 at http://kodeforest.net/html/bon-voyage/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://kodeforest.net/html/bon-voyage/ -O1 "C:\Users\Tun_Equip\Desktop\template" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+13:10:55	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/index.html (from kodeforest.net/html/bon-voyage/)
+13:15:05	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/extra-images/instagram-img14.jpg (from kodeforest.net/html/bon-voyage/)
+13:15:06	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/default/sprite.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:06	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/default/sprite_x.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:06	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/default/sprite_y.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:06	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/default/sprite_next.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:06	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/default/sprite_prev.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:06	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/default/default_thumb.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:06	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/default/loader.gif (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:06	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/light_rounded/sprite.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:06	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/light_rounded/btnNext.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:06	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/light_rounded/btnPrevious.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:06	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/light_rounded/loader.gif (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:06	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/dark_rounded/sprite.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:06	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/dark_rounded/contentPattern.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:06	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/dark_rounded/btnNext.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:06	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/dark_rounded/btnPrevious.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:06	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/dark_rounded/loader.gif (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:06	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/dark_square/loader.gif (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:06	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/dark_square/sprite.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:06	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/dark_square/btnNext.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:06	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/dark_square/btnPrevious.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:06	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/light_square/sprite.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:07	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/light_square/btnNext.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:07	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/light_square/btnPrevious.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:07	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/facebook/sprite.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:07	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/facebook/contentPatternTop.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:07	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/facebook/contentPatternLeft.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:07	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/facebook/contentPatternRight.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:07	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/facebook/loader.gif (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:07	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/facebook/btnNext.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:07	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/facebook/btnPrevious.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:07	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/facebook/contentPatternBottom.png (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:07	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/images/prettyPhoto/facebook/default_thumbnail.gif (from kodeforest.net/html/bon-voyage/js/prettyphoto/prettyPhoto.css)
+13:15:07	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/image/jplayer.pink.flag.jpg (from kodeforest.net/html/bon-voyage/js/videoplay/jplayer.min.css)
+13:15:07	Error: 	"Not Found" (404) at link kodeforest.net/html/bon-voyage/js/image/jplayer.pink.flag.seeking.gif (from kodeforest.net/html/bon-voyage/js/videoplay/jplayer.min.css)
+
+HTTrack Website Copier/3.49-2 mirror complete in 13 minutes 11 seconds : 362 links scanned, 325 files written (20669518 bytes overall) [20769101 bytes received at 26256 bytes/sec], 7.2 requests per connection
+(36 errors, 0 warnings, 0 messages)

@@ -135,7 +135,7 @@ function veriflogin() {
 
 
         if ((user == "admin") && (pass == "admin")) {
-            window.location.href = '../../../../index.html';
+            window.location.href = '../../../../ajoutervol.html';
         }
         else {
             alert("mot de passe incorrect")

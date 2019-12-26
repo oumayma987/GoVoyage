@@ -68,7 +68,7 @@ function ajouter() {
 
 
             tab1 += `<tr>
-          <td> ${list[i].im}</td>
+          <td><img src="./src/${list[i].im}"/> </td>
           <td> ${list[i].nom}</td>
           <td> ${list[i].etoile}</td>
           <td> ${list[i].adr}</td>
@@ -108,7 +108,7 @@ function editTask(index) {
             let html = `<br>
     <br>
     <br>
-    image <input type="text" id="img" value='${list[i].im}' placeholder="image"> </br></br>
+    image <input type="file" id="img" value='${list[i].im}' placeholder="image"> </br></br>
     nom<input type="text" id="nom" value='${list[i].nom}' pl placeholder="nom"></br></br>
     etoile <input type="text" id="etoil" value='${list[i].etoile}' placeholder="etoile"> </br></br>
     adress<input type="text" id="adress" value='${list[i].adr}' pl placeholder="adress"></br></br>

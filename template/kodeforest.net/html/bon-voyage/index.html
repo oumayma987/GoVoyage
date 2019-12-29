@@ -45,6 +45,8 @@
 	<link href="css/responsive.css" rel="stylesheet">
 	<link rel="icon" type="image/png" href="images/logoo.png" sizes="32x32" />
 	<script src='./vol.js'></script>
+	<script src='./hotels.js'></script>
+
 </head>
 
 <body>
@@ -295,36 +297,26 @@
 									<div class="booking_content">
 										<!--Travel location finder-->
 										<div class="kode_felid">
-											<label>Destination</label>
+											<label>nom</label>
 											<div class="ralative-icon">
-												<input type="text" class="location-finder"
-													placeholder="City, Region, Conuntry, landmark, Hotel, Dist">
+												<input type="text"id="name" class="location-finder"
+													placeholder="Nom">
+												<span class="icon-signs"></span>
+											</div>
+										</div>
+										<div class="kode_felid">
+											<label>prix </label>
+											<div class="ralative-icon">
+												<input type="text" id="price" class="location-finder"
+													placeholder="prix">
 												<span class="icon-signs"></span>
 											</div>
 										</div>
 										<!--Travel location finder ends-->
 										<div class="booking_content">
 											<div class="row">
-												<div class="col-md-6 col-xs-12 col-sm-6">
-													<!--Travel check in calender-->
-													<div class="kode_felid">
-														<label>Check-in Date</label>
-														<div class="ralative-icon">
-															<input class="checkin" type="date">
-															<span class="fa fa-calendar"></span>
-														</div>
-													</div>
-												</div>
-												<div class="col-md-6 col-xs-12 col-sm-6">
-													<!--Travel check out calender-->
-													<div class="kode_felid">
-														<label>Check-Out Date</label>
-														<div class="ralative-icon">
-															<input class="checkout" type="date">
-															<span class="fa fa-calendar"></span>
-														</div>
-													</div>
-												</div>
+												
+												
 												<div class="col-md-9">
 													<div class="booking_content">
 														<div class="row">
@@ -374,7 +366,7 @@
 												<div class="col-md-3 col-xs-12 col-sm-12">
 													<!--Travel booking submit-->
 													<div class="submit-form">
-														<button type="button"
+														<button type="button" onclick="filterhotel() "
 															class="btn-normal-1 animated effect2-color-1">Search
 															Now</button>
 													</div>
@@ -483,14 +475,31 @@
 			<section class="travel_services_blog overlay-white-80">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-12">
-							<p>les voles disponibles: </p>
-							<div id="filtervols">
+							<div class="col-md-4">
+							</div>
 
+						<div class="col-md-8">
+							<div>
+							<table border="0" id="filtervols">
+								</table>
+							</div>
 						</div>
+									
+					</div>
+					<div class="row">
+							<div class="col-md-4">
+							</div>
+
+						<div class="col-md-8">
+							<div>
+							<table border="0" id="filterhotel">
+								</table>
+							</div>
+						</div>
+									
 					</div>
 				</div>
-		</div>
+	
 		</section>
 		<!--Travel services ends-->
 		<!--Travel section-->

@@ -213,35 +213,49 @@ function validdate() {
     return true;
 }
 
-
-
 function filter() {
     document.getElementById("filtervols").style.display = "block";
     var depart = document.getElementById("depart").value;
     var arrive = document.getElementById("arrive").value;
     var lieux = document.getElementById("lieux").value;
     var list = JSON.parse(localStorage.getItem('vol'));
+  
     if (list === null) {
         list = []
     }
 
 
     for (i = 0; i < list.length; i++) {
-        if ((depart !== list[i].datedepart) && (arrive !== list[i].datedarrive) && (lieux !== list[i].destination)) {
-            alert("vol indisponible")
-    
-        }
-        else{ 
-            var chaine = ` <br>
-      <label>Date de départ:  ${list[i].datedepart}</label> <br>
-      <label>Date d'arrive:  ${list[i].datedarrive}</label> <br>
-      <label>Destination:  ${list[i].destination}</label> <br> 
-      <input type="button" onclick=" " value="résrver">
-      `
+        if ((lieux == list[i].destination)&&(depart == list[i].datedepart)&&(arrive == list[i].datedarrive))
+     {
+            var chaine = `
+            <tr>
+            <th> Date de départ</th> 
+            <th>Date d'arrivée</th> 
+            <th> destination</th> 
+            <th> Action</th> 
+       </tr>
+       `
 
-       
-        }
-    }
+           chaine += `<tr>
+              <td> ${list[i].datedepart}</td>
+              <td> ${list[i].datedarrive}</td>
+              <td> ${list[i].destination}</td>
+              <td><button Onclick="Reserver(${list[i].id})">Réserver</boutton>
+              </td>
+         </tr>
+         `
+       }
+     
+    
+    // else {
+    //     alert("vol indisponible")
+    // }
+}
 
     document.getElementById("filtervols").innerHTML = chaine;
+    
 }
+
+
+

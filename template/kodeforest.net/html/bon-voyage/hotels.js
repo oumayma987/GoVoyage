@@ -161,7 +161,7 @@ function filterhotel() {
         list = []
     }
     for (i = 0; i < list.length; i++) {
-        if ((name == list[i].nom)&&(price == list[i].prx))
+        if ((name == list[i].nom))
      {
             var chaine = `
             <tr>

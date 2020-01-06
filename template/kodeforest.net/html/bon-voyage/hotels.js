@@ -153,33 +153,37 @@ function vide() {
 }
 function filterhotel() {
     document.getElementById("filterhotel").style.display = "block";
-    var name = document.getElementById("name").value;
-    var price = document.getElementById("price").value;
     var list = JSON.parse(localStorage.getItem('hotels'));
-
+    var adress = document.getElementById("name").value;
     if (list === null) {
         list = []
     }
+    var chaine = `
+    <tr>
+    <th>image</th>
+    <th>Nom</th> 
+    <th>etoile</th>
+    <th>adress</th>
+    <th> prix</th> 
+    <th> Action</th> 
+    </tr>
+    `
     for (i = 0; i < list.length; i++) {
-        if (name == list[i].nom) {
-            var chaine = `
-            <tr>
-            <th>image</th>
-            <th>Nom</th> 
-            <th> prix</th> 
+        if (adress == list[i].adr) {
+            console.log(adress == list[i].adr);
+            console.log(adress, list[i].adr);
 
-            
-            <th> Action</th> 
-       </tr>
-       `
 
             chaine += `<tr>
-               <td><img src="./src/${list[i].im}"/></td>
-
+              <td><img src="./src/${list[i].im}"/></td>
               <td> ${list[i].nom}</td>
+              <td> ${list[i].etoile}</td>
+              <td> ${list[i].adr}</td>
               <td> ${list[i].prx}</td>
 
               <td><button Onclick="Reserver()">Réserver</boutton>
+              <button Onclick="Reserver()">annuler</boutton>
+
               </td>
          </tr>
          `
@@ -190,6 +194,7 @@ function filterhotel() {
         //      alert("hotel indisponible");
         //  }
     }
+    console.log(chaine);
 
     document.getElementById("filterhotel").innerHTML = chaine;
 

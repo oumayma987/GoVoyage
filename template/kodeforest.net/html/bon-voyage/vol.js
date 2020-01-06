@@ -219,15 +219,14 @@ function filter() {
     var arrive = document.getElementById("arrive").value;
     var lieux = document.getElementById("lieux").value;
     var list = JSON.parse(localStorage.getItem('vol'));
-  
+
     if (list === null) {
         list = []
     }
 
 
     for (i = 0; i < list.length; i++) {
-        if ((lieux == list[i].destination)&&(depart == list[i].datedepart)&&(arrive == list[i].datedarrive))
-     {
+        if ((lieux == list[i].destination) && (depart == list[i].datedepart) && (arrive == list[i].datedarrive)) {
             var chaine = `
             <tr>
             <th> Date de départ</th> 
@@ -237,7 +236,7 @@ function filter() {
        </tr>
        `
 
-           chaine += `<tr>
+            chaine += `<tr>
               <td> ${list[i].datedepart}</td>
               <td> ${list[i].datedarrive}</td>
               <td> ${list[i].destination}</td>
@@ -245,16 +244,15 @@ function filter() {
               </td>
          </tr>
          `
-       }
-     
-    
-    // else {
-    //     alert("vol indisponible")
-    // }
-}
+        }
+
+        // else {
+        //     alert("vol indisponible")
+        // }
+    }
 
     document.getElementById("filtervols").innerHTML = chaine;
-    
+
 }
 
 

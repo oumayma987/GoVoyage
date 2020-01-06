@@ -240,7 +240,10 @@ function filter() {
               <td> ${list[i].datedepart}</td>
               <td> ${list[i].datedarrive}</td>
               <td> ${list[i].destination}</td>
-              <td><button Onclick="Reserver(${list[i].id})">Réserver</boutton>
+              <td>
+              <button Onclick="Reserver(${list[i].id})">Réserver</boutton>
+              <button Onclick="Reserver(${list[i].id})">Annuler</boutton>
+
               </td>
          </tr>
          `

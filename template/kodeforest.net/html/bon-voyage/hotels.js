@@ -24,7 +24,7 @@ function addhotels() {
 
     localStorage.setItem("hotels", JSON.stringify(list));
 
-    
+
 
     ajouter()
 
@@ -36,7 +36,7 @@ function ajouter() {
     tab1.innerHTML = '';
     var list = JSON.parse(localStorage.getItem('hotels'));
 
-    
+
 
     if (list === null) {
 
@@ -145,26 +145,26 @@ function vide() {
     var etoil = document.getElementById("etoile").value;
     var adres = document.getElementById("adress").value;
     var prix = document.getElementById("prix").value;
-    if ((img=="") || (nom=="")||(etoil=="")||(adres=="")||(prix=="")){
-        alert ("champ vide")
+    if ((img == "") || (nom == "") || (etoil == "") || (adres == "") || (prix == "")) {
+        alert("champ vide")
         return false
     }
     return true
 }
 function filterhotel() {
     document.getElementById("filterhotel").style.display = "block";
-    var name=document.getElementById("name").value;
-    var price= document.getElementById("price").value;
+    var name = document.getElementById("name").value;
+    var price = document.getElementById("price").value;
     var list = JSON.parse(localStorage.getItem('hotels'));
-  
+
     if (list === null) {
         list = []
     }
     for (i = 0; i < list.length; i++) {
-        if ((name == list[i].nom))
-     {
+        if (name == list[i].nom) {
             var chaine = `
             <tr>
+            <th>image</th>
             <th>Nom</th> 
             <th> prix</th> 
 
@@ -173,23 +173,26 @@ function filterhotel() {
        </tr>
        `
 
-           chaine += `<tr>
+            chaine += `<tr>
+               <td><img src="./src/${list[i].im}"/></td>
+
               <td> ${list[i].nom}</td>
               <td> ${list[i].prx}</td>
+
               <td><button Onclick="Reserver()">Réserver</boutton>
               </td>
          </tr>
          `
-       }
-     
-    
-    //  else {
-    //      alert("hotel indisponible");
-    //  }
-}
+        }
+
+
+        //  else {
+        //      alert("hotel indisponible");
+        //  }
+    }
 
     document.getElementById("filterhotel").innerHTML = chaine;
-    
+
 }
 
 
@@ -198,5 +201,5 @@ function filterhotel() {
 
 
 
-        
-    
+
+

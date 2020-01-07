@@ -47,15 +47,15 @@ function EnregistreFormul() {
 
 function userExist() {
 
-    var list = JSON.parse(localStorage.getItem('client'))
-    if (list == null) {
-        list = []
+    var listUser = JSON.parse(localStorage.getItem('client'))
+    if (listUser == null) {
+        listUser = []
     }
     var psedo = document.getElementById("psedo").value
     var mail = document.getElementById("mail").value
 
-    for (let i = 0; i < list.length; i++) {
-        if (psedo == (list[i].psedo) || mail == list[i].mail) {
+    for (let i = 0; i < listUser.length; i++) {
+        if (psedo == (listUser[i].psedo) || mail == listUser[i].mail) {
 
 
             alert('vous aves deja inscrit !')
@@ -119,14 +119,14 @@ function veriflogin() {
     var user = document.getElementById("user").value
     var pass = document.getElementById("pass").value
     // creation d'objet et afficher son contenu 
-    var list = JSON.parse(localStorage.getItem('client'))
-    if (list == null) {
-        list = []
+    var listUser = JSON.parse(localStorage.getItem('client'))
+    if (listUser == null) {
+        listUser = []
     }
-    for (i = 0; i < list.length; i++) {
+    for (i = 0; i < listUser.length; i++) {
         // console.log(user);
-        if ((list[i].psedo == user) && (list[i].motdepasse == pass)) {
-            localStorage.setItem('connectedClient',JSON.stringify(list[i]))
+        if ((listUser[i].psedo == user) && (listUser[i].motdepasse == pass)) {
+            localStorage.setItem('connectedClient',JSON.stringify(listUser[i]))
 
 
             window.location.href = 'index.html';

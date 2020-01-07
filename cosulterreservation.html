@@ -4,6 +4,7 @@
 <head>
     <script src="./hotels.js"></script>
 
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>AdminLTE 3 | Dashboard</title>
@@ -274,66 +275,41 @@
         <!-- Main content -->
         <section class="content">
 
+            <div class="col-md-4">
+                <div class="input-group-append">
+                    <button id="add-new-event" type="button" class="btn btn-primary" onclick="ajouterreservation()"
+                        style="width: 200px;margin-bottom: 50px;">les réservations</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+ 
+            </div>
 
 
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            image: <input id="img" type="file" class="form-control" placeholder="image">
+            <div class="external-events">
+                    <div>
+ 
                         </div>
-                    </div>
+
+
+                <table id="tabreservation" border="3" style="width: 600px;margin-left: 70px;">
+                </table>
+                <!-- /btn-group -->
+
+                <!-- /input-group -->
+
+
+            </div>
                 </div>
                 <br>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            nom hotel: <input id="nom" type="text" class="form-control" placeholder="nom hotel">
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            etoiles: <input id="etoile" type="text" class="form-control" placeholder="etoiles">
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            adress: <input id="adress" type="text" class="form-control" placeholder="adress">
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            prix:<input id="prix" type="text" class="form-control" placeholder="prix">
-                        </div>
-                    </div>
-                </div>
+                
                 <!-- /.card-body -->
 
                 <!-- /.card -->
 
                 <!-- /btn-group -->
                 <br>
-                <div class="row">
-                    <div class="col-md-3">
-                    </div>
-
-
-                    <div class="col-md-4">
-                        <div class="input-group-append">
-                            <button id="add-new-event" type="button" class="btn btn-primary" onclick="vide();addhotels()"
-                                style="width: 200px;">Ajouter</button>
-                        </div>
-                    </div>
-                </div>
+               
                 <!-- /btn-group -->
 
                 <!-- /input-group -->

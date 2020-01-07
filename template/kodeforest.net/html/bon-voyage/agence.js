@@ -18,7 +18,7 @@ function EnregistreFormul() {
         }
 
         let obj = {
-            id: Math.floor(Math.random() * 1000) + 1,
+            iduser : Math.floor(Math.random() * 1000) + 1,
             psedo: psedo,
             nom: nom,
             prenom: prenom,
@@ -27,6 +27,7 @@ function EnregistreFormul() {
             motdepasse: motdepasse,
 
             role: 'user'
+            
 
 
         }
@@ -125,6 +126,7 @@ function veriflogin() {
     for (i = 0; i < list.length; i++) {
         // console.log(user);
         if ((list[i].psedo == user) && (list[i].motdepasse == pass)) {
+            localStorage.setItem('connectedClient',JSON.stringify(list[i]))
 
 
             window.location.href = 'index.html';

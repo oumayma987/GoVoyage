@@ -7,16 +7,21 @@ function addhotels() {
     var list = JSON.parse(localStorage.getItem('hotels'));
 
 
+
     if (list == null) {
         list = []
     }
     obj = {
-        id: Math.floor(Math.random() * 1000) + 1,
+        idhotel: Math.floor(Math.random() * 1000) + 1,
         im: img.files[0].name,
         nom: nom,
         etoile: etoil,
         adr: adres,
         prx: prix
+        // owner: loggedUser.idclient 
+
+
+
     }
 
 
@@ -35,6 +40,7 @@ function ajouter() {
     var tab1 = document.getElementById("tab")
     tab1.innerHTML = '';
     var list = JSON.parse(localStorage.getItem('hotels'));
+
 
 
 
@@ -155,6 +161,7 @@ function filterhotel() {
     document.getElementById("filterhotel").style.display = "block";
     var list = JSON.parse(localStorage.getItem('hotels'));
     var adress = document.getElementById("name").value;
+
     if (list === null) {
         list = []
     }
@@ -200,8 +207,99 @@ function filterhotel() {
 
 }
 
+function Reserver() {
+    var listreservation = JSON.parse(localStorage.getItem('reservation'));
+    var nbadult = document.getElementById("nbadult").value;
+    var nbenfant = document.getElementById("nbenfant").value;
+    var nbromm = document.getElementById("romm").value;
+    var loggedUser = JSON.parse(localStorage.getItem('connectedClient'));
 
 
+
+
+
+
+    if (listreservation == null) {
+        listreservation = []
+    }
+    obj = {
+        idreservation: Math.floor(Math.random() * 1000) + 1,
+        owner: loggedUser.iduser,
+        //  idhotel: idhotel,
+        nombreadult: nbadult,
+        nombreenfant: nbenfant,
+        nombreromms: nbromm,
+
+
+
+    }
+
+
+    listreservation.push(obj);
+
+    localStorage.setItem("reservation", JSON.stringify(listreservation));
+
+
+
+
+}
+
+function ajouterreservation() {
+
+
+    var tab1 = document.getElementById("tabreservation")
+    tab1.innerHTML = '';
+    var listreservation = JSON.parse(localStorage.getItem('reservation'));
+    var loggedUser = JSON.parse(localStorage.getItem('connectedClient'));
+
+
+
+
+
+    if (listreservation === null) {
+
+        tab1.innerHTML += `
+          <tr>
+               <th> id_user</th>
+               <th> id_hotel</th>
+               <th> nombre_adult</th>
+               <th> nombre_enfant</th>
+               <th> nombre_romms</th>
+               <th> Action</th>
+  
+          </tr>
+          `
+    }
+    else {
+        tab1 = `
+        <tr>
+               <th> id_user</th>
+               <th> nombre_adult</th>
+               <th> nombre_enfant</th>
+               <th> nombre_romms</th>
+               <th> Action</th>
+  
+        
+   
+ </tr>
+      `
+        for (i = 0; i < listreservation.length; i++) {
+
+
+            tab1 += `<tr>
+          <td> ${listreservation[i].owner}</td>
+          <td> ${listreservation[i].nombreadult}</td>
+          <td> ${listreservation[i].nombreenfant}</td>
+          <td> ${listreservation[i].nombreromms}</td>
+          <td><button Onclick="deletee(${listreservation[i].idreservation})">cofirmer</boutton>
+          <button Onclick="editTask(${listreservation[i].idreservation})">refuser</button> 
+          </td>
+          </tr>
+          `
+        }
+    }
+    document.getElementById("tabreservation").innerHTML = tab1;
+}
 
 
 

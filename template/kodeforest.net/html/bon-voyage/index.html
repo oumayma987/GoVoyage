@@ -336,7 +336,7 @@
 																<!--Travel booking rooms-->
 																<div class="kode_felid">
 																	<label>Rooms</label>
-																	<select class="select">
+																	<select class="select" id='romm'>
 																		<option>01</option>
 																		<option>02</option>
 																		<option>03</option>
@@ -365,13 +365,7 @@
 																	</select>
 																</div>
 															</div>
-															<div class="col-md-3 col-xs-12 col-sm-6">
-																<!--Travel booking procode-->
-																<div class="kode_felid">
-																	<label>Pro Code</label>
-																	<input type="text" placeholder="Code">
-																</div>
-															</div>
+															
 														</div>
 													</div>
 												</div>
@@ -432,7 +426,7 @@
 																<!--Travel booking adults-->
 																<div class="kode_felid">
 																	<label>Adults</label>
-																	<select class="select">
+																	<select class="select" id="nbadult">
 																		<option>01</option>
 																		<option>02</option>
 																		<option>03</option>
@@ -443,7 +437,7 @@
 																<div class="kode_felid">
 																	<!--Travel booking children-->
 																	<label>Children</label>
-																	<select class="select">
+																	<select class="select" id="nbenfant">
 																		<option>01</option>
 																		<option>02</option>
 																		<option>03</option>
@@ -505,11 +499,32 @@
 							<div>
 							<table border="0" id="filterhotel">
 								</table>
+
+								
 							</div>
 						</div>
 									
 					</div>
-				</div>
+				</div><div class="modal" tabindex="-1" role="dialog">
+					<div class="modal-dialog" role="document">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <h5 class="modal-title">Modal title</h5>
+						  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						  </button>
+						</div>
+						<div class="modal-body">
+						  <p>Modal body text goes here.</p>
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-primary">Save changes</button>
+						  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+				  </div>
+
 	
 		</section>
 		<!--Travel services ends-->

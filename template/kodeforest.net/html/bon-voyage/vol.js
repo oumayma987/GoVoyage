@@ -25,6 +25,8 @@ function addvol() {
     var prix = document.getElementById("prix").value;
 
     var list = JSON.parse(localStorage.getItem('vol'));
+    // var loggedUser = JSON.parse(localStorage.getItem('connectedUser'));
+
     if (list == null) {
         list = []
     }
@@ -36,6 +38,7 @@ function addvol() {
         datedarrive: datedarrive,
         destination: destination,
         prix: prix,
+        // owner: loggedUser.iduser
     }
 
     list.push(obj);
@@ -219,30 +222,31 @@ function filter() {
     var arrive = document.getElementById("arrive").value;
     var lieux = document.getElementById("lieux").value;
     var list = JSON.parse(localStorage.getItem('vol'));
-
+    let loggedUser = JSON.parse(localStorage.getItem('connectedUser'));
     if (list === null) {
         list = []
     }
-
-
+    var chaine = `
+    <tr>
+    <th> Date de départ</th> 
+    <th>Date d'arrivée</th> 
+    <th> destination</th>
+    <th> prix </th>  
+    <th> Action</th> 
+</tr>
+`
     for (i = 0; i < list.length; i++) {
-        if ((lieux == list[i].destination) && (depart == list[i].datedepart) && (arrive == list[i].datedarrive)) {
-            var chaine = `
-            <tr>
-            <th> Date de départ</th> 
-            <th>Date d'arrivée</th> 
-            <th> destination</th> 
-            <th> Action</th> 
-       </tr>
-       `
+        if ((lieux == list[i].destination) ) {
 
             chaine += `<tr>
               <td> ${list[i].datedepart}</td>
               <td> ${list[i].datedarrive}</td>
               <td> ${list[i].destination}</td>
+              <td> ${list[i].prix}</td>
+
               <td>
-              <button Onclick="Reserver(${list[i].id})">Réserver</boutton>
-              <button Onclick="Reserver(${list[i].id})">Annuler</boutton>
+              <button Onclick="">Réserver</boutton>
+              <button Onclick="">Annuler</boutton>
 
               </td>
          </tr>

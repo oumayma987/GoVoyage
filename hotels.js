@@ -12,7 +12,7 @@ function addhotels() {
         listHotel = []
     }
     obj = {
-        idhotel: Math.floor(Math.random() * 1000) + 1,
+        id: Math.floor(Math.random() * 1000) + 1,
         im: img.files[0].name,
         nom: nom,
         etoile: etoil,
@@ -213,11 +213,9 @@ function Reserver(idhotel) {
     var nbromm = document.getElementById("room").value;
     var loggedUser = JSON.parse(localStorage.getItem('connectedClient'));
     var listHotel = JSON.parse(localStorage.getItem('hotels'));
-    var datearrive = document.getElementById("arrive").value;
-    var datedepart = document.getElementById("depart").value;
-
-
-
+    var datearrive = document.getElementById("depart").value;
+    var datedepart = document.getElementById("arrive").value;
+     
 
     if (listreservation == null) {
         listreservation = []
@@ -249,8 +247,8 @@ function Reserver(idhotel) {
 function ajouterreservation() {
 
 
-    var tab1 = document.getElementById("tabreservation")
-    tab1.innerHTML = '';
+    var tab2 = document.getElementById("tabreservation")
+    tab2.innerHTML = '';
     var listreservation = JSON.parse(localStorage.getItem('reservation'));
     // var loggedUser = JSON.parse(localStorage.getItem('connectedClient'));
     var listHotel = JSON.parse(localStorage.getItem('hotels'));
@@ -262,12 +260,12 @@ function ajouterreservation() {
 
     if (listreservation === null) {
 
-        tab1.innerHTML += `
+        tab2.innerHTML += `
           <tr>
-               <th> id_user</th>
-               <th> id_hotel</th>
-               <th> date depart</th>
+               <th> nom user</th>
+               <th> nom hotel</th>
                <th> date d'arrive</th>
+               <th> date depart</th>
                <th> nombre_adult</th>
                <th> nombre_enfant</th>
                <th> nombre_romms</th>
@@ -277,12 +275,12 @@ function ajouterreservation() {
           `
     }
     else {
-        tab1 = `
+        tab2 = `
                <tr>
-               <th> id_user</th>
-               <th> id_hotel</th>
-               <th> date depart</th>
+               <th> nom user</th>
+               <th>nom hotel</th>
                <th> date d'arrive</th>
+               <th> date depart</th>
                <th> nombre_adult</th>
                <th> nombre_enfant</th>
                <th> nombre_romms</th>
@@ -296,6 +294,7 @@ function ajouterreservation() {
 
             for (let j = 0; j < listHotel.length; j++) {
 
+                console.log(listHotel[j].id , listreservation[i].idhotel);
 
                 if (listHotel[j].id == listreservation[i].idhotel) {
 
@@ -303,6 +302,8 @@ function ajouterreservation() {
                 }
 
             }
+            console.log(listreservation[i]['nomHotel']);
+
             for (let k = 0; k < listUser.length; k++) {
 
 
@@ -313,7 +314,7 @@ function ajouterreservation() {
             }
 
 
-            tab1 += `<tr>
+            tab2 += `<tr>
             <td> ${listreservation[i]['nomClient']}</td>
           <td> ${listreservation[i]['nomHotel']}</td>
           <td> ${listreservation[i].dd}</td>
@@ -321,16 +322,16 @@ function ajouterreservation() {
           <td> ${listreservation[i].nombreadult}</td>
           <td> ${listreservation[i].nombreenfant}</td>
           <td> ${listreservation[i].nombreromms}</td>
-          <td><button Onclick="confirm(id)">confirmer</boutton>
-          <button Onclick="editTask(${listreservation[i].idreservation})">refuser</button> 
+          <td><button Onclick="confirm(${listreservation[i].id})">confirmer</boutton>
+          <button Onclick="refused(${listreservation[i].id})">refuser</button> 
           </td>
           </tr>
           `
         }
     }
-    console.log(listUser);
+    console.log(listreservation);
 
-    document.getElementById("tabreservation").innerHTML = tab1;
+    document.getElementById("tabreservation").innerHTML = tab2;
 }
 
 
@@ -346,12 +347,36 @@ function confirm(id) {
 
 
 
-    if (listreservationconfirme == null) {
-        listreservationconfirme = []
+    if (listreservation == null) {
+        listreservation = []
     }
     for (let i = 0; i < listreservation.length; i++) {
         if (listreservation[i].id == id) {
             listreservation[i].status = 'confirm'
+        }
+
+    }
+    localStorage.setItem("reservation", JSON.stringify(listreservation));
+}
+
+function refused(id) {
+
+    // var listreservationconfirme = JSON.parse(localStorage.getItem('reservation confirme'));
+
+
+    var listreservation = JSON.parse(localStorage.getItem('reservation'));
+
+
+
+
+
+
+    if (listreservation == null) {
+        listreservation = []
+    }
+    for (let i = 0; i < listreservation.length; i++) {
+        if (listreservation[i].id == id) {
+            listreservation[i].status = 'refused'
         }
 
     }

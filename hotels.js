@@ -223,15 +223,15 @@ function Reserver(idhotel) {
         listreservation = []
     }
     obj = {
-        idreservation: Math.floor(Math.random() * 1000) + 1,
+        id: Math.floor(Math.random() * 1000) + 1,
         owner: loggedUser.iduser,
         idhotel: idhotel,
-        dd:datedepart,
-        da:datearrive,
+        dd: datedepart,
+        da: datearrive,
         nombreadult: nbadult,
         nombreenfant: nbenfant,
         nombreromms: nbromm,
-
+        status: 'waiting'
 
 
     }
@@ -242,18 +242,19 @@ function Reserver(idhotel) {
     localStorage.setItem("reservation", JSON.stringify(listreservation));
 
 
-    
+
 
 }
 
 function ajouterreservation() {
 
-   
+
     var tab1 = document.getElementById("tabreservation")
     tab1.innerHTML = '';
     var listreservation = JSON.parse(localStorage.getItem('reservation'));
     // var loggedUser = JSON.parse(localStorage.getItem('connectedClient'));
     var listHotel = JSON.parse(localStorage.getItem('hotels'));
+    var listUser = JSON.parse(localStorage.getItem('client'));
 
 
 
@@ -293,43 +294,69 @@ function ajouterreservation() {
       `
         for (i = 0; i < listreservation.length; i++) {
 
-            // for (let j = 0; j < listHotel.length; j++) {
-            //     if (listHotel[j].idhotel == listreservation[i].iduser) {
-            //         listreservation[i]['nomHotel'] = listHotel[j].nom
-            //     }
+            for (let j = 0; j < listHotel.length; j++) {
 
-            // }
-            // for (let k = 0; k < listUser.length; k++) {
-            //     if (listUser[k].iduser == listreservation[i].iduser) {
-            //         listreservation[i]['nomClient'] = listUser[k].nom
-            //     }
 
-            // }
+                if (listHotel[j].id == listreservation[i].idhotel) {
+
+                    listreservation[i]['nomHotel'] = listHotel[j].nom
+                }
+
+            }
+            for (let k = 0; k < listUser.length; k++) {
+
+
+                if (listUser[k].iduser == listreservation[i].owner) {
+                    listreservation[i]['nomClient'] = listUser[k].nom
+                }
+
+            }
 
 
             tab1 += `<tr>
-            <td> ${listreservation[i].owner}</td>
-          <td> ${listreservation[i].idhotel}</td>
+            <td> ${listreservation[i]['nomClient']}</td>
+          <td> ${listreservation[i]['nomHotel']}</td>
           <td> ${listreservation[i].dd}</td>
           <td> ${listreservation[i].da}</td>
           <td> ${listreservation[i].nombreadult}</td>
           <td> ${listreservation[i].nombreenfant}</td>
           <td> ${listreservation[i].nombreromms}</td>
-          <td><button Onclick="deletee(${listreservation[i].idreservation})">cofirmer</boutton>
+          <td><button Onclick="confirm(id)">confirmer</boutton>
           <button Onclick="editTask(${listreservation[i].idreservation})">refuser</button> 
           </td>
           </tr>
           `
         }
     }
+    console.log(listUser);
+
     document.getElementById("tabreservation").innerHTML = tab1;
 }
 
-function confirme() {
-    
-    
-}
 
+function confirm(id) {
+
+    // var listreservationconfirme = JSON.parse(localStorage.getItem('reservation confirme'));
+
+
+    var listreservation = JSON.parse(localStorage.getItem('reservation'));
+
+
+
+
+
+
+    if (listreservationconfirme == null) {
+        listreservationconfirme = []
+    }
+    for (let i = 0; i < listreservation.length; i++) {
+        if (listreservation[i].id == id) {
+            listreservation[i].status = 'confirm'
+        }
+
+    }
+    localStorage.setItem("reservation", JSON.stringify(listreservation));
+}
 
 
 

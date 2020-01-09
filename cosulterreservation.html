@@ -32,7 +32,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed" onload="ajouter()">
+<body class="hold-transition sidebar-mini layout-fixed" onload="ajouterreservation()">
     <div class="wrapper">
 
         <!-- Navbar -->
@@ -248,12 +248,7 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="rservation.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>confirmer réservation</p>
-                                    </a>
-                                </li>
+                                
                                 <li class="nav-item">
                                     <a href="cosulterreservation.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
@@ -263,6 +258,16 @@
 
                             </ul>
                         </li>
+                        <li class="nav-item has-treeview">
+                            <a href="template\kodeforest.net\html\bon-voyage\login.html" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                    deconnexion
+                                    <i class="fas fa-angle-left right"></i>
+
+                                </p>
+                            </a>
+                          </li>
                     </ul>
                 </nav>
             </div>
@@ -277,13 +282,12 @@
 <div class="container">
             <div class="col-md-4">
                 <div class="input-group-append">
-                    <button id="add-new-event" type="button" class="btn btn-primary" onclick="ajouterreservation()"
-                        style="width: 200px;margin-bottom: 50px;">les réservations</button>
+                    
                 </div>
             </div>
             <div class="col-md-10">
 
-                <table id="tabreservation" border="3" style="width: 800px;margin-left: 70px;">
+                <table id="tabreservation" border="3" style="width: 900px;margin-left: 70px;">
                 </table>
                 <!-- /btn-group -->
 

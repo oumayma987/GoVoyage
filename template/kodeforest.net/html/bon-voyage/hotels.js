@@ -213,8 +213,9 @@ function Reserver(idhotel) {
     var nbromm = document.getElementById("room").value;
     var loggedUser = JSON.parse(localStorage.getItem('connectedClient'));
     var listHotel = JSON.parse(localStorage.getItem('hotels'));
-    var datearrive = document.getElementById("arrive").value;
-    var datedepart = document.getElementById("depart").value;
+    var datearrive = document.getElementById("depart").value;
+    var datedepart = document.getElementById("arrive").value;
+     
 
     if (listreservation == null) {
         listreservation = []
@@ -261,10 +262,10 @@ function ajouterreservation() {
 
         tab2.innerHTML += `
           <tr>
-               <th> id_user</th>
-               <th> id_hotel</th>
-               <th> date depart</th>
+               <th> nom user</th>
+               <th> nom hotel</th>
                <th> date d'arrive</th>
+               <th> date depart</th>
                <th> nombre_adult</th>
                <th> nombre_enfant</th>
                <th> nombre_romms</th>
@@ -276,10 +277,10 @@ function ajouterreservation() {
     else {
         tab2 = `
                <tr>
-               <th> id_user</th>
-               <th> id_hotel</th>
-               <th> date depart</th>
+               <th> nom user</th>
+               <th>nom hotel</th>
                <th> date d'arrive</th>
+               <th> date depart</th>
                <th> nombre_adult</th>
                <th> nombre_enfant</th>
                <th> nombre_romms</th>
